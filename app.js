@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var animalRouter = require('./routes/animal');
 var gridbuildRouter = require('./routes/gridbuild');
+var selector = require('./routes/selector');
 const { use } = require('./routes/animal');
 
 var app = express();
@@ -26,6 +27,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/animal', animalRouter);
 app.use('/gridbuild', gridbuildRouter)
+app.use('/selector', selector)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
